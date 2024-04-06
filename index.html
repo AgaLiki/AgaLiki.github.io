@@ -3,76 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .calculator {
-            margin: 50px auto;
-            width: 400px; /* Adjusted width for 1920x1080 */
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        input[type="button"] {
-            width: 23%; /* Adjusted button width */
-            padding: 10px;
-            margin: 5px 1%;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
+    <title>Delicious Pizza</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" id="display" disabled>
-        <br>
-        <input type="button" value="1" onclick="addToDisplay('1')">
-        <input type="button" value="2" onclick="addToDisplay('2')">
-        <input type="button" value="3" onclick="addToDisplay('3')">
-        <input type="button" value="+" onclick="addToDisplay('+')">
-        <br>
-        <input type="button" value="4" onclick="addToDisplay('4')">
-        <input type="button" value="5" onclick="addToDisplay('5')">
-        <input type="button" value="6" onclick="addToDisplay('6')">
-        <input type="button" value="-" onclick="addToDisplay('-')">
-        <br>
-        <input type="button" value="7" onclick="addToDisplay('7')">
-        <input type="button" value="8" onclick="addToDisplay('8')">
-        <input type="button" value="9" onclick="addToDisplay('9')">
-        <input type="button" value="*" onclick="addToDisplay('*')">
-        <br>
-        <input type="button" value="C" onclick="clearDisplay()">
-        <input type="button" value="0" onclick="addToDisplay('0')">
-        <input type="button" value="=" onclick="calculate()">
-        <input type="button" value="/" onclick="addToDisplay('/')">
-    </div>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Delicious Pizza">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script>
-        function addToDisplay(value) {
-            document.getElementById('display').value += value;
-        }
+    <section id="home">
+        <div class="hero">
+            <h1>Welcome to Delicious Pizza</h1>
+            <p>Bringing you the most mouthwatering pizzas in town!</p>
+            <a href="#menu" class="btn">View Menu</a>
+        </div>
+    </section>
 
-        function clearDisplay() {
-            document.getElementById('display').value = '';
-        }
+    <section id="menu">
+        <div class="menu-items">
+            <h2>Our Menu</h2>
+            <div class="item">
+                <img src="pizza1.jpg" alt="Margherita Pizza">
+                <h3>Margherita Pizza</h3>
+                <p>Fresh tomatoes, mozzarella, basil</p>
+                <span>$10</span>
+            </div>
+            <!-- More menu items go here -->
+        </div>
+    </section>
 
-        function calculate() {
-            var displayValue = document.getElementById('display').value;
-            var result = eval(displayValue);
-            document.getElementById('display').value = result;
-        }
-    </script>
+    <section id="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>We are dedicated to crafting the most delicious pizzas using only the finest ingredients. Our passion for pizza shines through in every bite!</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Address: 123 Main St, Cityville</p>
+            <p>Phone: 555-123-4567</p>
+            <p>Email: info@deliciouspizza.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Delicious Pizza. All rights reserved.</p>
+    </footer>
 </body>
 </html>
